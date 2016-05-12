@@ -1,0 +1,24 @@
+﻿<Window x:Class="jpeg_to_pdf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:jpeg_to_pdf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.CommandBindings>
+        <CommandBinding Command="Open" Executed="Open_Click"/>
+        <CommandBinding Command="Save" Executed="Save_Click"/>
+    </Window.CommandBindings>
+    <DockPanel >
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Command="Open" Content="Open images" />
+                <Separator></Separator>
+                <Button Command="Save" Content="Save PDF" />
+            </ToolBar>
+        </ToolBarTray>
+        <TextBox AcceptsReturn="True" />
+        <Image x:Name="TestImage" Height="203" VerticalAlignment="Top" Width="234"/>
+    </DockPanel>
+</Window>
